@@ -1,5 +1,5 @@
 !1157;s
-A
+J
 SAU0PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012-Run\012ADD_EXE_PATH==Y\012
 SCU0PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012-Run\012ADD_EXE_PATH==Y\012
 S+U0PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012-Run\012ADD_EXE_PATH==Y\012
@@ -11,7 +11,8 @@ s#i0
 s#k0
 s#j0
 s#l0
-!48;g
+!1169;d
+[\012  grasp [\012   legendy -32.37499999999999\012   legendx -55.0\012   version 1\012   winflags 3\012   eheight 691\012   ewidth 683\012   height 691\012   width 683\012   wbp 0\012   initlayout 0\012   yoffs 1.4999999999999716\012   xoffs 2.000000000000057\012   scale 1.0\012   args ""\012   otherflags 139\012   shallowjar 1\012   visflags 118423807\012  ]\012  directed 1\012  node [\012   ClassInfo [\012    condition 1\012    access2 0\012    access 2097152\012    classname "Factory"\012    fromclassfiledate 0\012    fromclassfilename "%\011source%sFactory.class"\012    fromfilename "%\011source%sFactory.java"\012   ]\012   id 0\012   graphics [\012    center [\012     x -55.0\012     y 0.0\012     z 0.0\012    ]\012   ]\012   vgj [\012    flags 0\012   ]\012  ]\012  node [\012   ClassInfo [\012    condition 1\012    access2 0\012    access 2097152\012    classname "Orc"\012    fromclassfiledate 0\012    fromclassfilename "%\011source%sOrc.class"\012    fromfilename "%\011source%sOrc.java"\012   ]\012   id 1\012   graphics [\012    center [\012     x 55.0\012     y 0.0\012     z 0.0\012    ]\012   ]\012   vgj [\012    flags 0\012   ]\012  ]\012 ]!48;g
 %\011source%sOrc.java
 %\011source%sFactory.java
 !48;f
