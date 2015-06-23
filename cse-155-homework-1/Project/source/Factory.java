@@ -5,8 +5,8 @@
  * factory can also customized orcs based on user specification.
  * CSCE 155 Spring 2005
  * Assignment 1
- * @author
- * @version
+ * @author     Kyle Parrish
+ * @version    1.0
  */
 
 // import statements
@@ -73,8 +73,8 @@ public class Factory  {
     */
    public void displayWelcome()  {
 
-      /* Display a brief welcome message about the factory */
-
+      System.out.println("Welcome to the Orc produciton factory!");
+      System.out.println("This factory will create specific orc or mass produce orcs!");
    }  // end displayWelcome
 
    /**
@@ -86,7 +86,24 @@ public class Factory  {
     */
 
    public void obtainProductionMode()  {
-
+      int temp;
+      
+      while(1) {
+         temp = 0;
+         
+         System.out.print("Please select production mode 1 for mass production and 2 for customized production: ");
+         temp = readInteger();
+         if(temp == 1 || temp == 2)
+         {
+            break;
+         }
+         else
+         {
+            System.out.println("You must choose either 1 or 2");
+         }
+      }
+      
+      productionMode = temp;
       // 1.  Prompt the user to enter a number.
       // 2.  Call "readInteger()" to get the number.
       // 3.  Then set "productionMode" of the factory to that number
