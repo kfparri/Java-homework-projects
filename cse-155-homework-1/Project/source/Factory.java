@@ -31,9 +31,9 @@ public class Factory
    {
       String userInput = "";
       int temp = 0;
-
+   
       BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in), 1);
-
+   
       try 
       {
          userInput = stdin.readLine();
@@ -43,7 +43,7 @@ public class Factory
       {
          System.out.println(ex);
       }
-
+   
       return temp;
    }
          
@@ -55,7 +55,7 @@ public class Factory
    private String readString()  
    {
       String userInput = "";
-
+   
       BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in), 1);
       try 
       {
@@ -65,7 +65,7 @@ public class Factory
       {
          System.out.println(ex);
       }
-
+   
       return userInput;
    }
 
@@ -83,7 +83,6 @@ public class Factory
     * readInteger() to obtain the mode.  1 means "mass production", "2" means
     * "customized production".    Note that this method does not return
     * anything.
-    * Yet to be implemented.
     */
 
    public void obtainProductionMode()  
@@ -99,27 +98,46 @@ public class Factory
     * he/she wants the factory to churn out.  It then stores the number in
     * "productionTotal".
     * It simply specifies, and does not actually create the orcs. 
-    * Yet to be implemented.
     */
 
    public void specifyMassProduction()  
    {
-      // 1.  Prompt the user for the number of orcs that they want to have.
-      // 2.  Call "readInteger()" to get the number.
-      // 3.  Then set "productionTotal" of the factory to that number
+      int temp = -1;
+      
+      while (true)
+      {
+         System.out.print("Please enter the number of orcs you would like to produce: ");
+         temp = readInteger();
+         
+         if(temp > 0)
+         {
+            productionTotal = temp;
+            temp = -1;
+            break;
+         }
+         else
+         {
+            System.out.println("I'm sorry, you must enter a number greater than 0");
+            System.out.println("");
+            System.out.println("");
+            System.out.println("");
+         }
+      }
    }
 
    /**
     * This method tests the orc behavior.  It asks the orc to do all the 
     * things that an orc is supposed to do.  
     * @argument It takes an Orc object as input.
-    * Yet to be implemented.
     */
 
    public void testOrcBehavior(Orc newOrc)  
    {
-      //  Find out what things an orc can do from Orc.java.
-      //  Then here, "ask" the orc to do those things one at a time.
+      newOrc.growl();
+      newOrc.speak("I can speak");
+      newOrc.walk();
+      newOrc.run();
+      newOrc.fight();
    }
 
    /**
@@ -127,7 +145,6 @@ public class Factory
     * a customized orc that he/she wants the factory to make.
     * Unlike the mass production, this method actually takes the specification
     * and builds an orc.
-    * Yet to be implemented.
     */
 
    public void specifyCustomizedProduction()  
@@ -148,7 +165,7 @@ public class Factory
       //     orc.  It does this by calling "testOrcBehavior()".
     
       System.out.println("Customizing an orc ...");
-
+   
       Orc customizedOrc = new Orc();  // this creates one orc but with 
                                       // default settings.    
       //
@@ -183,13 +200,13 @@ public class Factory
       {  
          // mass produce
          //  1. Call "specifyMassProduction()
-        specifyMassProduction();
+         specifyMassProduction();
       } 
       else if (productionMode == 2)  
       {  
          // customize
          //  1. Call "specifyCustomizedProduction()
-        specifyCustomizedProduction();
+         specifyCustomizedProduction();
       } 
       else 
       {

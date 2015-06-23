@@ -53,7 +53,7 @@ public class Orc
       weaponUsed = DEFAULT_WEAPON_USED;
       armorUsed = DEFAULT_ARMOR_USED;
       ugliness = DEFAULT_UGLINESS;
-
+   
    }
 
    // --------------------------------------------------------------------------
