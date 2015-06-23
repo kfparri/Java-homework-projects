@@ -12,9 +12,8 @@
 // import statements
 import java.io.*;
 
-public class Factory  {
-
-
+public class Factory  
+{
    // -------------------------------------------------------------------------
    // You may add data members to the following to describe a factory.  Right
    // now, the factory has only two data members.
@@ -28,54 +27,56 @@ public class Factory  {
     * returns that integer to the caller of this method.
     */
 
-   private int readInteger()  {
-
+   private int readInteger()  
+   {
       String userInput = "";
       int temp = 0;
 
-      BufferedReader stdin = 
-         new BufferedReader(new InputStreamReader(System.in), 1);
+      BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in), 1);
 
-      try {
+      try 
+      {
          userInput = stdin.readLine();
          temp = Integer.parseInt(userInput);  // convert to integer
-      }  catch (IOException ex) {
+      }  
+      catch (IOException ex) 
+      {
          System.out.println(ex);
-         }
+      }
 
       return temp;
-
-   }  // end readInteger
+   }
          
    /**
     * This method reads in a string and returns that string to the caller of 
     * this method.
     */
 
-   private String readString()  {
-
+   private String readString()  
+   {
       String userInput = "";
 
-      BufferedReader stdin = 
-         new BufferedReader(new InputStreamReader(System.in), 1);
-      try {
+      BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in), 1);
+      try 
+      {
          userInput = stdin.readLine();
-      }  catch (IOException ex) {
+      }  
+      catch (IOException ex) 
+      {
          System.out.println(ex);
-         }
+      }
 
       return userInput;
-
-   }  // end readString
+   }
 
    /**
     * This method displays a welcome message to the user.
     */
-   public void displayWelcome()  {
-
+   public void displayWelcome()  
+   {
       System.out.println("Welcome to the Orc produciton factory!");
       System.out.println("This factory will create specific orc or mass produce orcs!");
-   }  // end displayWelcome
+   }
 
    /**
     * This method obtains the production mode from the user.  It calls
@@ -85,10 +86,12 @@ public class Factory  {
     * Yet to be implemented.
     */
 
-   public void obtainProductionMode()  {
+   public void obtainProductionMode()  
+   {
       int temp;
       
-      while(1) {
+      while(true) 
+      {
          temp = 0;
          
          System.out.print("Please select production mode 1 for mass production and 2 for customized production: ");
@@ -108,8 +111,7 @@ public class Factory  {
       // 2.  Call "readInteger()" to get the number.
       // 3.  Then set "productionMode" of the factory to that number
       //
-   }  // end obtainProductionMode
-
+   }
 
    /**
     * This method interacts with the user to obtain the number of orcs that
@@ -119,13 +121,12 @@ public class Factory  {
     * Yet to be implemented.
     */
 
-   public void specifyMassProduction()  {
-
+   public void specifyMassProduction()  
+   {
       // 1.  Prompt the user for the number of orcs that they want to have.
       // 2.  Call "readInteger()" to get the number.
       // 3.  Then set "productionTotal" of the factory to that number
-
-   }  // end specifyMassProduction
+   }
 
    /**
     * This method tests the orc behavior.  It asks the orc to do all the 
@@ -134,12 +135,11 @@ public class Factory  {
     * Yet to be implemented.
     */
 
-   public void testOrcBehavior(Orc newOrc)  {
-
+   public void testOrcBehavior(Orc newOrc)  
+   {
       //  Find out what things an orc can do from Orc.java.
       //  Then here, "ask" the orc to do those things one at a time.
-
-   }  // end testOrcBehavior
+   }
 
    /**
     * This method interacts with the user to obtain specific information about
@@ -149,8 +149,8 @@ public class Factory  {
     * Yet to be implemented.
     */
 
-   public void specifyCustomizedProduction()  {
-
+   public void specifyCustomizedProduction()  
+   {
       // 1.  Prompt the user for the specification of an orc that they want to
       //     build.  Must do this for each data member that an orc has.
       //     For example:
@@ -176,9 +176,7 @@ public class Factory  {
       // here you need to printout the information about the orc
       
       testOrcBehavior(customizedOrc); // call to test whether the orc is alive!
-
-   }  // end specifyMassProduction
-
+   }
 
    /**
     * This method interacts with the user to obtain specifications.
@@ -194,37 +192,38 @@ public class Factory  {
     * Not completely implemented.
     */
 
-   public void interactWithUser()  {
-
+   public void interactWithUser()  
+   {
       // 1.  Call "obtainProductionMode()" to obtain the mode.
       //
       obtainProductionMode();
       
-      if (productionMode == 1)  {  // mass produce
+      if (productionMode == 1)  
+      {  
+         // mass produce
          //  1. Call "specifyMassProduction()
         specifyMassProduction();
-      } else if (productionMode == 2)  {  // customize
+      } 
+      else if (productionMode == 2)  
+      {  
+         // customize
          //  1. Call "specifyCustomizedProduction()
         specifyCustomizedProduction();
-      } else {
+      } 
+      else 
+      {
          System.out.println("Wrong input.  Program terminates.");
       }
-
-         
-
-
-   }  // end interactWithUser
+   }
 
 
    /**
     * This method displays a goodbye message to the user.
     */
-   public void displayGoodbye()  {
-
+   public void displayGoodbye()  
+   {
       /* Display a brief goodbye message from the factory */
-
-   }  // end displayGoodbye
-
+   }
 
    /**
     * This main method creates an object of the Factory class and runs the
@@ -233,12 +232,11 @@ public class Factory  {
     * asks the factory object to display a good bye message.
     */
 
-   public static void main(String[] args)  {
-
+   public static void main(String[] args)  
+   {
       Factory myFactory = new Factory();
       myFactory.displayWelcome();
       myFactory.interactWithUser();
       myFactory.displayGoodbye();
-
-   }  // end main
-}  // end class Factory
+   }
+}

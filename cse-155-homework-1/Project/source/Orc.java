@@ -9,9 +9,8 @@
 // import statements
 import java.io.*;
 
-public class Orc  {
-
-
+public class Orc  
+{
    // -------------------------------------------------------------------------
    // You may add more data members to the following to describe an orc.
    // -------------------------------------------------------------------------
@@ -46,8 +45,8 @@ public class Orc  {
     *  If you add more data members, you will have to initialize them here
     *  too.
     */
-   public Orc()  {
-
+   public Orc()  
+   {
       name = "dummy";
       height = DEFAULT_HEIGHT;
       weight = DEFAULT_WEIGHT;
@@ -55,60 +54,70 @@ public class Orc  {
       armorUsed = DEFAULT_ARMOR_USED;
       ugliness = DEFAULT_UGLINESS;
 
-   }  // end constructor
+   }
 
    // --------------------------------------------------------------------------
    // For each of the following "get" and "set" methods, you must provide 
    // comments and complete the implementation.  
    // --------------------------------------------------------------------------
 
-   public String getName()  {
-
+   public String getName()  
+   {
       return name;
-
    }
 
-   public void setName(String newName)  {
+   public void setName(String newName)  
+   {
       name = newName;
    }
 
-   public double getHeight()  {
+   public double getHeight()  
+   {
       return height;
    }
 
-   public void setHeight(double newHeight)  {
-      height = newHeignt;
+   public void setHeight(double newHeight)  
+   {
+      height = newHeight;
    }
 
-   public double getWeight()  {
+   public double getWeight()  
+   {
       return weight;
    }
 
-   public void setWeight(double newWeight)  {
-      weight = new Weight;
+   public void setWeight(double newWeight)  
+   {
+      weight = newWeight;
    }
 
-   public String getWeaponUsed()  {
+   public String getWeaponUsed()  
+   {
       return weaponUsed;
    }
 
-   public void setWeaponUsed(String newWeapon)  {
+   public void setWeaponUsed(String newWeapon)  
+   {
       weaponUsed = newWeapon;
    }
 
-   public String getArmorUsed()  {
+   public String getArmorUsed()  
+   {
       return armorUsed;
    }
 
-   public void setArmorUsed(String newArmor)  {
+   public void setArmorUsed(String newArmor)  
+   {
       armorUsed = newArmor;
    }
 
-   public int getUgliness()  {
+   public int getUgliness()  
+   {
       return ugliness;
    }
 
-   public void setUgliness(double newUgliness)  {
+   public void setUgliness(int newUgliness)  
+   {
       ugliness = newUgliness;
    }
 
@@ -117,8 +126,8 @@ public class Orc  {
     * If you added new data members in the above, then you should also modify
     * this method.
     */
-   public void printInfo()  {
-
+   public void printInfo()  
+   {
       System.out.println("Information of Orc:");
       System.out.println("Name           : " + name);
       System.out.println("Height         : " + height);
@@ -127,8 +136,7 @@ public class Orc  {
       System.out.println("Armor Used     : " + armorUsed);
       System.out.println("Ugliness       : " + ugliness);
       System.out.println("End Information of Orc:");
-
-   }  // end printInfo
+   }
 
    // --------------------------------------------------------------------------
    // In the following, we will just have some "simulated" methods since you do
@@ -143,35 +151,37 @@ public class Orc  {
     * Presently, we simulate the running using a series of print statements.
     */
 
-   public void run()  {
-
+   public void run()  
+   {
       System.out.println("Running -- starting out clumsily");
       System.out.println("Running -- darting left and right, arms swinging");
       System.out.println("Running -- picking up speed, 5 km/hour");
       System.out.println("Running -- stopping after 5 minutes");
-
    }
 
-   public void fight()  {
-      System.out.println("Fighting -- " + name + " raises his " + weaponUsed + " and swings it violently";
+   public void fight()  
+   {
+      System.out.println("Fighting -- " + name + " raises his " + weaponUsed + " and swings it violently");
       System.out.println("Fighting -- his foe is vanquished!");
       System.out.println("Fighting -- victory!");
    }
 
-   public void walk()  {
+   public void walk()  
+   {
       System.out.println("Walking -- large lubering steps");
       System.out.println("Walking -- his " + armorUsed + " armor makes noise as he moves");
       System.out.println("Walking -- stopping after 5 minutes");
    }
 
-   public void growl()  {
+   public void growl()  
+   {
       System.out.println(name + " says: Grrrrrrrrrrrr");
    }
 
-   public void speak(String whatToSay)  {
+   public void speak(String whatToSay)  
+   {
       growl();
       System.out.println(name + " says: " + whatToSay);
       growl();
    }
-
-}  // end Class Orc
+}
