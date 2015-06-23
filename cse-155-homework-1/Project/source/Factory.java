@@ -88,29 +88,10 @@ public class Factory
 
    public void obtainProductionMode()  
    {
-      int temp;
-      
-      while(true) 
-      {
-         temp = 0;
-         
-         System.out.print("Please select production mode 1 for mass production and 2 for customized production: ");
-         temp = readInteger();
-         if(temp == 1 || temp == 2)
-         {
-            break;
-         }
-         else
-         {
-            System.out.println("You must choose either 1 or 2");
-         }
-      }
-      
-      productionMode = temp;
-      // 1.  Prompt the user to enter a number.
-      // 2.  Call "readInteger()" to get the number.
-      // 3.  Then set "productionMode" of the factory to that number
-      //
+      // Prompt the user for the production mode and load it into the productionMode variable.
+      //  This program does not validate the input, that is done in another function.
+      System.out.print("Please select production mode 1 for mass production and 2 for customized production: ");
+      productionMode = readInteger();
    }
 
    /**
@@ -222,7 +203,8 @@ public class Factory
     */
    public void displayGoodbye()  
    {
-      /* Display a brief goodbye message from the factory */
+      System.out.println("Thank you for producing orcs with us today!");
+      System.out.println("Goodbye!");
    }
 
    /**
